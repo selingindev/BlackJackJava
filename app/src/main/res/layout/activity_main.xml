@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jogador 1"
+        android:textAlignment="center"
+        android:textSize="65px"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewCarta"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+    <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingVertical="20px" android:paddingHorizontal="100px">
+
+
+        <Button
+            android:id="@+id/buttonComprar"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:text="Comprar!"
+            />
+
+        <Button
+            android:id="@+id/buttonParar"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:text="PARAR!"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="65px"
+        android:textColor="@color/black"
+        android:id="@+id/textViewPontos"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:id="@+id/textViewPontosBanca"
+        android:textSize="65px"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>

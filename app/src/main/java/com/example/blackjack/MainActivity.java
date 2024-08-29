@@ -32,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
         textViewPontosBanca = findViewById(R.id.textViewPontosBanca);
         imageViewCarta = findViewById(R.id.imageViewCarta);
 
-
         imageViewCarta.setImageResource(R.drawable.mesa);
-
 
         Random random = new Random();
 
@@ -42,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if(fimJogo == true){
+                if (fimJogo == true) {
                     pontosBanca = 0;
                     pontos = 0;
                     textViewPontos.setText("Seus pontos: " + pontos);
-                    textViewPontosBanca.setText("Pontos Da Banca: " + pontosBanca );
+                    textViewPontosBanca.setText("Pontos Da Banca: " + pontosBanca);
                     fimJogo = false;
                 }
                 int numero = random.nextInt(13) + 1;
@@ -107,19 +105,19 @@ public class MainActivity extends AppCompatActivity {
         buttonParar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                while (pontosBanca < pontos && pontos <= 21){
-                int numero = random.nextInt(13) + 1;
-                numero = (numero > 10) ? 10 : numero;
-                pontosBanca += numero;
-                textViewPontosBanca.setText("Pontos: " + pontosBanca);
-                    if (pontosBanca > 21){
+                while (pontosBanca < pontos && pontos <= 21) {
+                    int numero = random.nextInt(13) + 1;
+                    numero = (numero > 10) ? 10 : numero;
+                    pontosBanca += numero;
+                    textViewPontosBanca.setText("Pontos: " + pontosBanca);
+                    if (pontosBanca > 21) {
                         textViewPontos.setText("Jogador ganhou o jogo, a banca estourou");
                         textViewPontosBanca.setText("Pontos Da Banca: " + pontosBanca);
                         fimJogo = true;
                         break;
-                    }else if(pontosBanca >= pontos){
+                    } else if (pontosBanca >= pontos) {
                         textViewPontos.setText("A banca ganhou o jogo, seus pontos: " + pontos);
-                        textViewPontosBanca.setText("Pontos Da Banca: " + pontosBanca );
+                        textViewPontosBanca.setText("Pontos Da Banca: " + pontosBanca);
                         fimJogo = true;
                         break;
                     }
